@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">4 Pics 1 Word</string>
+    <string name="about"> \n\nThe game is written from an English dialect perspective, as well as contains some unfamiliar words, causing some people to turn to cheating sites or apps to get the correct answers. According to psychology PhD Jamie Madigan, "people are more likely to cheat when they are anonymous and that they’ll cheat less the more they are connected to other gamers — the more, in other words, that they are known.
+
+    \n\n\nThis is the 4th application created by me while studying at the GITA academy
+    </string>
+
+    <string name="about2"> \n\nThe game is written from an English dialect perspective, as well as contains some unfamiliar words, causing some people to turn to cheating sites or apps to get the correct answers. According to psychology PhD Jamie Madigan, "people are more likely to cheat when they are anonymous and that they’ll cheat less the more they are connected to other gamers — the more, in other words, that they are known.
+    </string>
+    <string name="abouts"><string name="info_person">This mobile application was made by Nematov Bahrom in 3 lessons of the GITA Programmers\' Academy.</string></string>
+    <string name="_30">/150</string>
+    <string name="name">Nematov Bahrom, phone number +998906675310 for offers and requests</string>
+
+    <string name="phone">For comments and suggestions, gmail: nematovbahrom@gmail.com</string>
+    <string name="_4_pictures_1word">4 Pictures 1 Word</string>
+    <string name="content_description">Content Description</string>
+
+    <string name="desh">-</string>
+</resources>

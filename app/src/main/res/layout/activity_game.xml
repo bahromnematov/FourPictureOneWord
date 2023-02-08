@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#218A84"
+    android:orientation="vertical"
+    tools:context=".mvp.views.GameActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#106264">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textQuestionPosInGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="1"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lvl_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/_30"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/textQuestionPosInGame"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:id="@+id/btnBackToMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_icon_coin"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="4dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_coin" />
+
+            <TextView
+                android:id="@+id/txtCoinCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="330dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_play"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="146dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="166dp"
+                android:scaleType="centerCrop"
+                android:layout_height="196dp"
+                android:layout_marginEnd="4dp"
+                tools:src="@drawable/work_1" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="166dp"
+                android:scaleType="centerCrop"
+                android:layout_height="186dp"
+                tools:src="@drawable/work_2" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="146dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="166dp"
+                android:layout_height="166dp"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="4dp"
+                tools:src="@drawable/work_3" />
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="166dp"
+                android:scaleType="centerCrop"
+                android:layout_height="166dp"
+                tools:src="@drawable/work_4" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/answers"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            style="@style/tvStyle.tvAnswersStyle"
+            tools:text="A" />
+
+        <TextView
+            style="@style/tvStyle.tvAnswersStyle"
+            tools:text="B" />
+
+        <TextView
+            style="@style/tvStyle.tvAnswersStyle"
+            tools:text="C" />
+
+        <TextView
+            style="@style/tvStyle.tvAnswersStyle"
+            tools:text="D" />
+
+        <TextView
+            style="@style/tvStyle.tvAnswersStyle"
+            tools:text="E" />
+
+        <TextView
+            style="@style/tvStyle.tvAnswersStyle"
+            tools:text="F" />
+
+        <TextView
+            style="@style/tvStyle.tvAnswersStyle"
+            tools:text="G" />
+
+        <TextView
+            style="@style/tvStyle.tvAnswersStyle"
+            android:layout_marginEnd="0dp"
+            tools:text="H" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/btnAddLetter"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_margin="6dp"
+            android:layout_toEndOf="@+id/variant6"
+            android:src="@drawable/hints_bg_yo" />
+
+        <ImageView
+            android:id="@+id/btnDeleteLetter"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:paddingTop="6dp"
+            android:layout_margin="6dp"
+            android:layout_gravity="center"
+            android:src="@drawable/remmmm"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:contentDescription="@string/app_name" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <RelativeLayout
+        android:id="@+id/variants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/variant1"
+            style="@style/tvStyle"
+            android:layout_margin="3dp"
+            tools:text="B" />
+
+        <TextView
+            android:id="@+id/variant2"
+            style="@style/tvStyle"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/variant1"
+            android:enabled="false"
+            android:text="C" />
+
+        <TextView
+            android:id="@+id/variant3"
+            style="@style/tvStyle"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/variant2" />
+
+        <TextView
+            android:id="@+id/variant4"
+            style="@style/tvStyle"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/variant3" />
+
+        <TextView
+            android:id="@+id/variant5"
+            style="@style/tvStyle"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/variant4" />
+
+        <TextView
+            android:id="@+id/variant6"
+            style="@style/tvStyle"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/variant5" />
+
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/btnAddLetter"-->
+        <!--            android:layout_width="56dp"-->
+        <!--            android:layout_height="98dp"-->
+        <!--            android:layout_toEndOf="@+id/variant6"-->
+        <!--            android:src="@drawable/coins" />-->
+
+        <TextView
+            android:id="@+id/variant7"
+            style="@style/tvStyle"
+            android:layout_below="@id/variant1"
+            android:layout_margin="3dp" />
+
+        <TextView
+            android:id="@+id/variant8"
+            style="@style/tvStyle"
+            android:layout_below="@id/variant1"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/variant1" />
+
+        <TextView
+            android:id="@+id/variant9"
+            style="@style/tvStyle"
+            android:layout_below="@id/variant1"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/variant2" />
+
+        <TextView
+            android:id="@+id/variant10"
+            style="@style/tvStyle"
+            android:layout_below="@id/variant1"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/variant3" />
+
+        <TextView
+            android:id="@+id/variant11"
+            style="@style/tvStyle"
+            android:layout_below="@id/variant1"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/variant4" />
+
+        <TextView
+            android:id="@+id/variant12"
+            style="@style/tvStyle"
+            android:layout_below="@id/variant1"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/variant5" />
+
+    </RelativeLayout>
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+</LinearLayout>
